@@ -1,11 +1,14 @@
-package Database;
+package Entity;
 
-public class Ewallet {
+public class Merchant{
     private String ewallet;
     private int nominal;
     private String notelp;
-  public Ewallet(){
 
+    public Merchant(String ewallet, int nominal, String notelp){
+        this.ewallet=ewallet;
+        this.nominal=nominal+2000;
+        this.notelp=notelp;
     }
 
     public String getNotelp() {
@@ -16,9 +19,6 @@ public class Ewallet {
         this.notelp = notelp;
     }
 
-    public Ewallet(String ewallet){
-        this.ewallet=ewallet;
-    }
     public String getEwallet(){
         return ewallet;
     }
@@ -31,6 +31,11 @@ public class Ewallet {
     }
 
     public void setNominal(int nominal) {
-        this.nominal = nominal;
+        this.nominal = nominal+2000;
+    }
+    public void output(){
+        System.out.println("No. Telp: "+this.notelp+" "+this.ewallet);
+        System.out.println("Nominal"+this.nominal);
+
     }
 }
